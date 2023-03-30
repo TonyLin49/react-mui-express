@@ -1,0 +1,153 @@
+{
+  "users": [
+    {
+      "id": "49a91dfc-f5f4-4d87-b45d-21636e1c53c2",
+      "username": "Sonia",
+      "displayname": "鍾雪婷",
+      "email": "sonia1201@gmail.com",
+      "password": "666666",
+      "applyDate": "2023-01-07",
+      "active": true,
+      "role": "editor",
+      "photoUrl": ""
+    },
+    {
+      "username": "Tony",
+      "displayname": "林文彬",
+      "email": "tonylin49@gmail.com",
+      "password": "666666",
+      "applyDate": "2023-01-01",
+      "active": true,
+      "role": "admin",
+      "photoUrl": "http://localhost:3000/images/profile.jpeg",
+      "id": "a981daef-0204-4226-bdb6-9104a8cb96d5"
+    },
+    {
+      "username": "tonyinfos",
+      "email": "tonyinfos@gmail.com",
+      "password": "666666",
+      "confirm": "666666",
+      "displayname": "東尼資訊有限公司",
+      "applyDate": "2023-01-21",
+      "role": "editor",
+      "active": true,
+      "id": "9f007955-c2f5-4c20-a79f-71b6817b693a"
+    },
+    {
+      "username": "erica",
+      "displayname": "林鈺珈",
+      "email": "erica1234@gmail.com",
+      "password": "666666",
+      "applyDate": "2023-01-21",
+      "role": "editor",
+      "active": true,
+      "id": "74a55f93-7545-4bf4-8dcf-967122881801"
+    }
+  ],
+  "tableSchema": [
+    {
+      "id": "users",
+      "fields": [
+        {
+          "fieldType": "TextField",
+          "name": "username",
+          "label": "使用者帳號 *"
+        },
+        {
+          "fieldType": "PasswordField",
+          "name": "password",
+          "label": "密碼 *"
+        },
+        {
+          "fieldType": "DateField",
+          "name": "onBoardDate",
+          "label": "到職日"
+        },
+        {
+          "fieldType": "TimeField",
+          "name": "onBoardTime",
+          "label": "到職時間"
+        },
+        {
+          "fieldType": "DateTimeField",
+          "name": "leaveDate",
+          "label": "離職日"
+        },
+        {
+          "fieldType": "NumberField",
+          "name": "salary",
+          "label": "薪資"
+        },
+        {
+          "fieldType": "TextField",
+          "name": "active",
+          "label": "類別",
+          "multiple": true,
+          "options": [
+            {
+              "active": "活躍"
+            },
+            {
+              "unActive": "停用"
+            },
+            {
+              "stop": "暫停"
+            }
+          ],
+          "defaultValue": []
+        },
+        {
+          "fieldType": "TextAreaField",
+          "name": "memo",
+          "label": "備註",
+          "props": {
+            "variant": "filled",
+            "multiline": true,
+            "minRows": 2,
+            "maxRows": 4
+          }
+        },
+        {
+          "fieldType": "TextField",
+          "name": "email",
+          "label": "電子郵件",
+          "props": {
+            "type": "email"
+          }
+        }
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "id": "zhTW",
+      "Register": {
+        "title": {
+          "label": "申請註冊帳號"
+        },
+        "username": {
+          "label": "使用者帳號 *",
+          "required": "使用者帳號為必填欄位"
+        },
+        "email": {
+          "label": "電子郵件 *",
+          "required": "電子郵件為必填欄位"
+        },
+        "password": {
+          "label": "密碼 *",
+          "min": "至少需6個字元",
+          "max": "至多12個字元",
+          "required": "確認密碼需與密碼相同"
+        },
+        "confirm": {
+          "label": "確認密碼 *",
+          "required": "確認密碼需與密碼相同"
+        }
+      }
+    }
+  ],
+  "profile": {
+    "name": "Tony Lin",
+    "photoUrl": "http://localhost:3000/images/profile.jpeg"
+  }
+}
