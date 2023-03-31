@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize')
 
 module.exports = new Sequelize(
-    'cpbl', 'sa', 'gp2u03@tonyinfos', {
-    host: 'localhost',
+    'test', 'sa', 'gp2u03@cpbl', {
+    host: '60.248.109.21',
     port: 1433,
     dialect: "mssql",
     pool: {

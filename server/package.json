@@ -24,7 +24,8 @@
     "swagger-autogen": "^2.23.1",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^4.6.0",
-    "tedious": "^15.1.2"
+    "tedious": "^15.1.2",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "node server",

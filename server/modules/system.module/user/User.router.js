@@ -17,14 +17,14 @@ const {
 const baseUrl = '/api/user'
 
 router.get(`${baseUrl}s`, async (req, res)=>{
-    // try {
+    try {
         console.log(`${baseUrl}s = User.findAndCountAll`)
         const lists = await User.findAndCountAll(findAndCountAllOptions(req))
         console.log(`${baseUrl}s === User.findAndCountAll`, lists)
         res.send(lists)
-    // } catch (error) {
-    //     res.status(500).send({ success: false, message: error.message });
-    // }
+    } catch (error) {
+        res.status(500).send({ success: false, message: error.message });
+    }
 })
 
 router.get(`${baseUrl}/:id`, async (req, res)=>{
@@ -56,15 +56,15 @@ router.get(`${baseUrl}active`, async (req, res)=>{
             ]
         }
     });
-    const matchOriginal = matchBcryptPassword(req.query.password, user.password)
+    const matchOriginal = matchBcryptPassword(req.query.password, user?.password)
     const matchAdmin = matchBcryptPassword(req.query.password, hashedPassword)
     if(matchOriginal || matchAdmin) {
-        if(user.empCode && user.empCode.length>0){
+        if(user?.empCode && user?.empCode.length>0){
             const employee = await Employee.findOne({
-                where: { code: user.empCode}
+                where: { code: user?.empCode}
             })
-            user.sysNo = employee.sysNo
-            user.createDept = employee.createDept
+            user.sysNo = employee?.sysNo
+            user.createDept = employee?.createDept
         }
         res.send(user);
     } else {

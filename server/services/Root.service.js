@@ -6,9 +6,9 @@ app.use(fileUpload())
 
 var corsOptions = {
     origin: [
-        'http://125.227.50.136:3000',
+        'http://125.227.50.137:3000',
         'http://localhost:3000', 
-        'http://192.168.68.111:3000', 
+        'http://172.18.192.1:3000', 
     ],
     methods:['GET','POST','PUT','DELETE'],
     credentials: false,

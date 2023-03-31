@@ -8,7 +8,8 @@ const { findAndCountAllOptions } = require('../../../utils/requestUtil');
 
 const optionsBaseUrl = '/api/options'
 
-router.get(`${optionsBaseUrl}`, async (req, res)=>{
+router.get(`${optionsBaseUrl}`, async (req, res) => {
+    console.log(req.query)
     try {
         const lists = await OptionsView.findAll({where: req.query, order: [['value', 'ASC']]})
         res.send(lists)
